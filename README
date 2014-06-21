@@ -9,3 +9,11 @@ The fundamental assumption is that, in a stable meta game, all strategies have a
 Any strategy that is worse in every matchup than another strategy is not viable.
 
 The degenerate case occurs when one strategy dominates utterly, and only faces itself in a stable metagame.
+
+Format
+Files read by the solver are in the format:
+First line contains a single int, equal to the number of strategies
+Followed by one line per strategy, containing only the name of the strategy
+Followed by a triangular array of data detailing the matchups between the strategies.  The data takes the form of floating point numbers, seperated by spaces.
+
+The triangular array of data is organized such that if you built a spreadsheet with each of the strategies occupying a row and column, and you were to march through that spreadsheet from left to right, the top to bottom, starting after the cell in which the same strategy appears as row and column, the data would answer the question: "how often does the row strategy beat the column strategy".  The lines in the data represent different rows in the spreadsheet.
