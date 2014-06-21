@@ -30,7 +30,27 @@ def viability_check():
   """
   The idea here is to remove all strategies that are strictly worse than another strategy
   """
-  pass
+  global _strategies, _matchups
+
+  non_viable = list()
+  for check in xrange(len(_strategies)):
+    for test in xrange(len(_strategies)):
+      if check == test:
+        continue
+      foundBetter = False
+      for matchup in xrange(len(_strategies)):
+        if _matchups[check][matchup] > _matchups[test][matchup]:
+          foundBetter = True
+          break
+      if not foundBetter:
+        non_viable.append(check)
+        break
+
+  # Iterating through this backwards keeps us from stepping on our indexes
+  for to_remove in non_viable[::-1]:
+    _strategies.pop(to_remove)
+    _matchups = np.delete(_matchups, to_remove, 0)
+    _matchups = np.delete(_matchups, np.s_[to_remove], 1)
 
 def solve():
   return linalg.solve(_matchups, np.array([[0.5]] * _matchups.shape[0]))
