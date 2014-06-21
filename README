@@ -17,3 +17,5 @@ Followed by one line per strategy, containing only the name of the strategy
 Followed by a triangular array of data detailing the matchups between the strategies.  The data takes the form of floating point numbers, seperated by spaces.
 
 The triangular array of data is organized such that if you built a spreadsheet with each of the strategies occupying a row and column, and you were to march through that spreadsheet from left to right, the top to bottom, starting after the cell in which the same strategy appears as row and column, the data would answer the question: "how often does the row strategy beat the column strategy".  The lines in the data represent different rows in the spreadsheet.
+
+Additionally, there is a format read by the calculator.  It is simply one line per game, with the two strategies seperated by a greater than or less than sign, indicating the winner.  The calculator will generate output that can be read by the solver.
