@@ -1,0 +1,11 @@
+Idea
+Competative games develop "meta-games" when players develop certain strategies to beat other strategies.  A healthy meta-game creates a large number of stable niches for players to fill, while an unhealthy meta might allow only 1 viable strategy.  In reality, meta-games tend to shift quickly from archetype to archetype as players race to outwit one another.  The analysis from a player perspective often amounts to little more than rock-paper-sissors.  Strategy X beats strategy Y, and Strategy Y is popular, so I play strategy X.
+
+This tool is intended to "solve" the meta-game based on statistical observation of the matchups of all visible strategies.
+
+Framework
+The fundamental assumption is that, in a stable meta game, all strategies have a 50% win rate.  The density of each viable strategy is determined to comply with that constraint.
+
+Any strategy that is worse in every matchup than another strategy is not viable.
+
+The degenerate case occurs when one strategy dominates utterly, and only faces itself in a stable metagame.
