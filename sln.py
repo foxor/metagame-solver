@@ -10,27 +10,32 @@ matchup_input = {
 }
 
 _name_indexes = []
+_matchups = []
 
 def parse_input():
-  pass
+  global _name_indexes, _matchups
 
-_name_indexes = [
-  'R',
-  'P',
-  'S'
-]
+  _name_indexes = list(matchup_input.keys())
+  name_lookup = dict((_name_indexes[i], i) for i in xrange(len(_name_indexes)))
 
-_matchups = np.array([
-  [0.5, 0.2, 0.6],
-  [0.8, 0.5, 0.3],
-  [0.4, 0.7, 0.5]
-])
+  _matchups = np.array(
+    list(
+      list(matchup_pair[1] for matchup_pair in 
+        sorted(
+          list((matchup, matchup_input[strategy][matchup]) for matchup in matchup_input[strategy]),
+          key= lambda matchup_pair: name_lookup[matchup_pair[0]]
+        )
+      ) for strategy in _name_indexes
+    )
+  )
+  import pdb;pdb.set_trace()
 
-constraints = np.array([
-  [0.5],
-  [0.5],
-  [0.5]
-])
+  
+  #_matchups = np.array([
+  #  [0.5, 0.2, 0.6],
+  #  [0.8, 0.5, 0.3],
+  #  [0.4, 0.7, 0.5]
+  #])
 
 def viability_check():
   """
