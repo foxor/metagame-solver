@@ -1,15 +1,25 @@
-7
+12
 Paladin.Midrange
 Shaman.Midrange
+Shaman.Midrange.Overload
+Priest.Control
+Warlock.Zoo.Murloc
 Druid.Ramp
 Rouge.Miracle
-Mage.Freeze
+Rouge.Miracle.Aggro
 Priest.Wombo
 Warlock.Zoo
-0.5 0.5 0.5 0.5 0.0 0.5
-0.5 0.5 0.0 0.5 0.5
-0.5 0.5 0.0 1.0
-0.5 1.0 0.0
-0.5 0.5
+Mage.Freeze.Pyro
+Mage.Freeze
+0.5 0.5 0.5 0.5 0.5 0.5 0.5 0.0 0.5 0.5 0.5
+0.5 0.5 0.5 0.5 0.0 0.5 0.5 0.5 0.5 0.5
+0.5 0.5 0.5 0.5 0.5 0.5 0.5 0.0 0.5
+0.5 0.5 0.5 0.5 0.5 0.5 0.5 0.0
+0.5 0.5 0.5 0.5 0.5 0.0 0.5
+0.5 0.5 0.0 1.0 0.5 0.5
+0.5 0.5 0.5 0.5 0.5
+1.0 0.0 0.5 0.0
+0.5 0.5 0.5
+1.0 0.0
 0.5
 

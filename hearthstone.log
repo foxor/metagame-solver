@@ -6,3 +6,8 @@ Warlock.Zoo<Druid.Ramp
 Druid.Ramp<Priest.Wombo
 Priest.Wombo>Paladin.Midrange
 Priest.Wombo<Rouge.Miracle.Aggro
+Mage.Freeze>Warlock.Zoo
+Rouge.Miracle>Shaman.Midrange
+Mage.Freeze>Rouge.Miracle.Aggro
+Mage.Freeze>Priest.Control
+Mage.Freeze<Rouge.Tempo

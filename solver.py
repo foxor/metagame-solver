@@ -102,7 +102,7 @@ def _desingularize():
 
 def display(solutions):
   for undefined in _undefined:
-    print "%s occupies an undefined percentage in the meta-game" % undefined
+    print "%s occupies an undefined percentage of the meta-game" % undefined
   if _undefined:
     print "Assuming all variable decks are unplayed:"
   for i in xrange(len(solutions)):
