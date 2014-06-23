@@ -12,7 +12,7 @@ def main(fName, depth):
     if '>' in line:
       strategy_names = line.strip().split('>')
     elif '<' in line:
-      strategy_names = line.strip().split('<').reverse()
+      strategy_names = line.strip().split('<')[::-1]
     else:
       sys.stderr.write("This line doesn't make sense: %s" % line)
       continue
@@ -37,7 +37,7 @@ def main(fName, depth):
     for opponent in xrange(primary + 1, len(strategies)):
       primary_wins = wins[strategies[primary]][strategies[opponent]] if strategies[primary] in wins and strategies[opponent] in wins[strategies[primary]] else 0
       losses = wins[strategies[opponent]][strategies[primary]] if strategies[opponent] in wins and strategies[primary] in wins[strategies[opponent]] else 0
-      percentages.append(str(float(primary_wins)/(primary_wins + losses)))
+      percentages.append(str(float(primary_wins)/(primary_wins + losses) if (primary_wins + losses > 0) else 0.5))
     print " ".join(percentages)
 
 if __name__ == '__main__':
