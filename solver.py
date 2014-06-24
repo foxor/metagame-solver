@@ -6,6 +6,7 @@ import sys
 
 _strategies = []
 _matchups = []
+_inviable = []
 _undefined = []
 
 def parse_input(fName):
@@ -50,12 +51,15 @@ def viability_check():
           foundBetter = True
           break
       if not foundBetter:
-        non_viable.append(check)
+        non_viable.append((check, test))
         break
+
+  if non_viable:
+    _inviable.append([(_strategies[x[0]], _strategies[x[1]]) for x in non_viable])
 
   # Iterating through this backwards keeps us from stepping on our indexes
   for to_remove in non_viable[::-1]:
-    _remove_strategy(to_remove)
+    _remove_strategy(to_remove[0])
 
   if non_viable:
     viability_check()
@@ -101,12 +105,18 @@ def _desingularize():
         return partial_solution
 
 def display(solutions):
+  for i in xrange(len(_inviable)):
+    print "Inviable decks in generation %d:\n\t%s" % (i + 1, "\n\t".join("%s is never better than %s" % 
+      (x[0], x[1]) for x in _inviable[i]))
   for undefined in _undefined:
     print "%s occupies an undefined percentage of the meta-game" % undefined
   if _undefined:
     print "Assuming all variable decks are unplayed:"
-  for i in xrange(len(solutions)):
-    print "%s: %.2f%%" % (_strategies[i], solutions[i] * 100.0)
+  if solutions != None:
+    for i in xrange(len(solutions)):
+      print "%s: %.2f%%" % (_strategies[i], solutions[i] * 100.0)
+  else:
+    print "Unable to make any conclusions"
 
 def main(fName):
   parse_input(fName)

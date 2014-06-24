@@ -1,1 +1,19 @@
-Mage.Freeze: 100.00%
+Inviable decks in generation 1:
+	Paladin.Midrange is never better than Mage.Combo.Spells
+	Priest.Control is never better than Warlock.Zoo.Murloc
+	Hunter.Midrange.Lifecoach is never better than Mage.Combo.Spells
+	Warlock.Zoo.Murloc is never better than Priest.Control
+	Rouge.Miracle is never better than Mage.Combo.Spells
+Inviable decks in generation 2:
+	Priest.Wombo is never better than Mage.Combo.Spells
+Inviable decks in generation 3:
+	Rouge.Miracle.Aggro is never better than Mage.Combo.Spells
+Inviable decks in generation 4:
+	Warlock.Zoo is never better than Mage.Combo.Spells
+Inviable decks in generation 5:
+	Druid.Ramp is never better than Mage.Combo.Spells
+	Shaman.Midrange.Overload is never better than Mage.Combo.Spells
+Inviable decks in generation 6:
+	Mage.Combo.Spells is never better than Rouge.Tempo
+	Mage.Freeze.Pyro is never better than Mage.Combo.Spells
+Rouge.Tempo: 100.00%

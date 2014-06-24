@@ -1,24 +1,26 @@
-12
+13
 Paladin.Midrange
-Shaman.Midrange
-Shaman.Midrange.Overload
 Priest.Control
+Hunter.Midrange.Lifecoach
 Warlock.Zoo.Murloc
-Druid.Ramp
+Mage.Combo.Spells
 Rouge.Miracle
 Rouge.Miracle.Aggro
+Rouge.Tempo
+Druid.Ramp
 Priest.Wombo
+Shaman.Midrange.Overload
 Warlock.Zoo
 Mage.Freeze.Pyro
-Mage.Freeze
-0.5 0.5 0.5 0.5 0.5 0.5 0.5 0.0 0.5 0.5 0.5
-0.5 0.5 0.5 0.5 0.0 0.5 0.5 0.5 0.5 0.5
-0.5 0.5 0.5 0.5 0.5 0.5 0.5 0.0 0.5
-0.5 0.5 0.5 0.5 0.5 0.5 0.5 0.0
-0.5 0.5 0.5 0.5 0.5 0.0 0.5
-0.5 0.5 0.0 1.0 0.5 0.5
-0.5 0.5 0.5 0.5 0.5
-1.0 0.0 0.5 0.0
+0.5 0.5 0.5 0.5 0.5 0.5 0.5 0.5 0.0 0.5 0.5 0.5
+0.5 0.5 0.5 0.5 0.5 0.5 0.5 0.5 0.5 0.5 0.0
+0.5 0.5 0.5 0.5 0.5 0.0 0.5 0.5 0.5 0.5
+0.5 0.5 0.5 0.5 0.5 0.5 0.5 0.5 0.0
+0.5 0.5 0.5 1.0 0.5 0.5 0.5 0.5
+0.5 0.5 0.5 0.5 0.5 0.5 0.5
+0.5 0.5 1.0 0.5 0.0 0.0
+0.5 0.5 0.5 0.5 1.0
+0.0 0.5 1.0 0.5
 0.5 0.5 0.5
 1.0 0.0
 0.5
