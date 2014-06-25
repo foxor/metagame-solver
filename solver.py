@@ -104,6 +104,13 @@ def _desingularize():
         _undefined = list(backup_strat[x] for x in combination)
         return partial_solution
 
+def scale(solutions):
+  smallest = min(solutions)
+  if smallest < 0:
+    total = 1 + -smallest * len(solutions)
+    return [(x - smallest) / total for x in solutions]
+  return solutions
+
 def display(solutions):
   for i in xrange(len(_inviable)):
     print "Inviable decks in generation %d:\n\t%s" % (i + 1, "\n\t".join("%s is never better than %s" % 
@@ -121,7 +128,7 @@ def display(solutions):
 def main(fName):
   parse_input(fName)
   viability_check()
-  display(solve())
+  display(scale(solve()))
 
 if __name__ == '__main__':
   if len(sys.argv) == 2:
