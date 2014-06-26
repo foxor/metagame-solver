@@ -105,6 +105,8 @@ def _desingularize():
         return partial_solution
 
 def scale(solutions):
+  if solutions == None:
+    return solutions
   smallest = min(solutions)
   if smallest < 0:
     total = 1 + -smallest * len(solutions)

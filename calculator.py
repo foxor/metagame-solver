@@ -33,11 +33,24 @@ def main(fName, depth):
   print "%s" % "\n".join(strategies)
 
   for primary in xrange(len(strategies)):
+    primary_name = strategies[primary]
     percentages = list()
     for opponent in xrange(primary + 1, len(strategies)):
-      primary_wins = wins[strategies[primary]][strategies[opponent]] if strategies[primary] in wins and strategies[opponent] in wins[strategies[primary]] else 0
-      losses = wins[strategies[opponent]][strategies[primary]] if strategies[opponent] in wins and strategies[primary] in wins[strategies[opponent]] else 0
-      percentages.append(str(float(primary_wins)/(primary_wins + losses) if (primary_wins + losses > 0) else 0.5))
+      opponent_name = strategies[opponent]
+      primary_wins = wins[primary_name][opponent_name] if primary_name in wins and opponent_name in wins[primary_name] else 0
+      opponent_wins = wins[opponent_name][primary_name] if opponent_name in wins and primary_name in wins[opponent_name] else 0
+      if primary_wins + opponent_wins == 0:
+        primary_losses_total = sum(wins[x][primary_name] for x in wins if primary_name in wins[x])
+        primary_wins_total = sum(x for x in wins[primary_name].values()) if primary_name in wins else 0
+        primary_record = float(primary_wins_total) / (primary_wins_total + primary_losses_total)
+
+        opponent_losses_total = sum(wins[x][opponent_name] for x in wins if opponent_name in wins[x])
+        opponent_wins_total = sum(x for x in wins[opponent_name].values()) if opponent_name in wins else 0
+        opponent_record = float(opponent_wins_total) / (opponent_wins_total + opponent_losses_total)
+
+        percentages.append(str(float(primary_record + (1 - opponent_record)) / 2.0))
+      else:
+        percentages.append(str(float(primary_wins)/(primary_wins + opponent_wins)))
     print " ".join(percentages)
 
 if __name__ == '__main__':

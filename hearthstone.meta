@@ -1,14 +1,20 @@
 Inviable decks in generation 1:
-	Paladin.Midrange is never better than Rouge.Miracle
+	Paladin.Midrange is never better than Shaman.Totem.Bloodlust
+	Priest.Giants is never better than Mage.Combo.Spells
 	Priest.Control is never better than Warlock.Zoo.Murloc
-	Hunter.Midrange.Lifecoach is never better than Rouge.Miracle
+	Hunter.Midrange.Lifecoach is never better than Shaman.Totem.Bloodlust
 	Warlock.Zoo.Murloc is never better than Priest.Control
-	Rouge.Miracle is never better than Rouge.Tempo
-Mage.Combo.Spells: -50.00%
-Rouge.Miracle.Aggro: -11.11%
-Druid.Ramp: -11.11%
-Priest.Wombo: 100.00%
-Shaman.Midrange.Overload: -16.67%
-Warlock.Zoo: 50.00%
-Rouge.Tempo: -11.11%
-Mage.Freeze.Pyro: 50.00%
+	Rouge.Miracle is never better than Mage.Combo.Spells
+	Rouge.Miracle.Aggro is never better than Shaman.Totem.Bloodlust
+Inviable decks in generation 2:
+	Warlock.Zoo is never better than Shaman.Totem.Bloodlust
+Inviable decks in generation 3:
+	Druid.Ramp is never better than Shaman.Totem.Bloodlust
+	Shaman.Midrange.Overload is never better than Shaman.Totem.Bloodlust
+Inviable decks in generation 4:
+	Mage.Combo.Spells is never better than Shaman.Totem.Bloodlust
+	Priest.Wombo is never better than Shaman.Totem.Bloodlust
+	Mage.Freeze.Pyro is never better than Shaman.Totem.Bloodlust
+Inviable decks in generation 5:
+	Rouge.Tempo is never better than Shaman.Totem.Bloodlust
+Shaman.Totem.Bloodlust: 100.00%
