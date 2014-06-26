@@ -122,7 +122,7 @@ def display(solutions):
   if _undefined:
     print "Assuming all variable decks are unplayed:"
   if solutions != None:
-    for i in xrange(len(solutions)):
+    for i in sorted(xrange(len(solutions)), key = lambda x: solutions[x]):
       print "%s: %.2f%%" % (_strategies[i], solutions[i] * 100.0)
   else:
     print "Unable to make any conclusions"
