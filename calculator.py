@@ -18,6 +18,10 @@ def main(fName, depth):
       continue
 
     strategy_names = list('.'.join(x.split('.')[:depth]) for x in strategy_names)
+
+    if strategy_names[0] == strategy_names[1]:
+      continue
+
     seen_strategies = seen_strategies.union(strategy_names)
 
     previous_wins = 0

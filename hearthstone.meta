@@ -1,16 +1,40 @@
 Inviable decks in generation 1:
-	Paladin.Midrange is never better than Rouge.Tempo
-	Priest.Giants is never better than Mage.Combo.Spells
-	Priest.Control is never better than Warlock.Zoo.Murloc
-	Warlock.Zoo.Murloc is never better than Priest.Control
-	Rouge.Miracle is never better than Mage.Combo.Spells
-Rouge.Tempo: 0.00%
-Rouge.Miracle.Aggro: 4.99%
-Shaman.Midrange.Overload: 5.06%
-Druid.Ramp: 5.78%
-Shaman.Totem.Bloodlust: 8.40%
-Mage.Combo.Spells: 9.08%
-Mage.Freeze.Pyro: 12.55%
-Warlock.Zoo: 15.29%
-Hunter.Midrange.Lifecoach: 15.54%
-Priest.Wombo: 18.16%
+	Control.Warrior is never better than Aggro.Druid.Token
+	Aggro.Shaman is never better than Aggro.Paladin
+	Midrange.Druid.Ramp.Murlock is never better than Aggro.Priest
+	Combo.Rouge.Miracle.Malygos is never better than Aggro.Priest
+	Aggro.Warlock.Zoo.Murloc is never better than Aggro.Priest
+	Control.Mage is never better than Midrange.Mage.Secret
+	Midrange.Druid is never better than Control.Mage
+	Midrange.Mage.Secret is never better than Control.Mage
+	Control.Mage.Freeze.Giants is never better than Aggro.Priest
+	Aggro.Paladin is never better than Aggro.Shaman
+	Aggro.Druid.Token is never better than Control.Warrior
+	Control.Priest.Giants is never better than Aggro.Priest
+	Control.Mage.Freeze.Antonidas is never better than Control.Paladin
+	Combo.Priest.Wombo is never better than Aggro.Priest
+Inviable decks in generation 2:
+	Aggro.Rouge.Miracle is never better than Aggro.Priest
+	Aggro.Shaman.Totem.Bloodlust is never better than Aggro.Priest
+Inviable decks in generation 3:
+	Midrange.Hunter.Lifecoach is never better than Aggro.Priest
+Midrange.Druid.Werewolf: 0.56%
+Control.Priest: 1.27%
+Aggro.Warrior: 1.68%
+Control.Paladin.Wombo: 1.86%
+Control.Mage.Freeze.Pyro: 1.98%
+Aggro.Hunter.Face: 2.12%
+Midrange.Shaman.Overload: 2.36%
+Control.Warlock.Handlock: 2.38%
+Aggro.Mage: 2.43%
+Aggro.Priest: 2.46%
+Aggro.Rouge.Tempo: 3.55%
+Aggro.Paladin.Shockadin: 4.35%
+Combo.Rouge.Miracle: 4.79%
+Midrange.Paladin: 6.66%
+Midrange.Druid.Ramp: 6.84%
+Control.Shaman: 8.10%
+Control.Paladin: 9.47%
+Mage.Midrange: 11.98%
+Aggro.Warlock.Zoo: 12.56%
+Combo.Mage.Spells: 12.62%

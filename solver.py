@@ -107,11 +107,8 @@ def _desingularize():
 def scale(solutions):
   if solutions == None:
     return solutions
-  smallest = min(solutions)
-  if smallest < 0:
-    total = 1 + -smallest * len(solutions)
-    return [(x - smallest) / total for x in solutions]
-  return solutions
+  total = sum(abs(x) for x in solutions)
+  return [abs(x) / total for x in solutions]
 
 def display(solutions):
   for i in xrange(len(_inviable)):
