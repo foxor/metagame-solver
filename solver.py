@@ -9,6 +9,8 @@ _matchups = []
 _inviable = []
 _undefined = []
 
+_DEBUG = False
+
 def parse_input(fName):
   global _strategies, _matchups
 
@@ -111,13 +113,14 @@ def scale(solutions):
   return [abs(x) / total for x in solutions]
 
 def display(solutions):
-  for i in xrange(len(_inviable)):
-    print "Inviable decks in generation %d:\n\t%s" % (i + 1, "\n\t".join("%s is never better than %s" % 
-      (x[0], x[1]) for x in _inviable[i]))
-  for undefined in _undefined:
-    print "%s occupies an undefined percentage of the meta-game" % undefined
-  if _undefined:
-    print "Assuming all variable decks are unplayed:"
+  if _DEBUG:
+    for i in xrange(len(_inviable)):
+      print "Inviable decks in generation %d:\n\t%s" % (i + 1, "\n\t".join("%s is never better than %s" % 
+        (x[0], x[1]) for x in _inviable[i]))
+    for undefined in _undefined:
+      print "%s occupies an undefined percentage of the meta-game" % undefined
+    if _undefined:
+      print "Assuming all variable decks are unplayed:"
   if solutions != None:
     for i in sorted(xrange(len(solutions)), key = lambda x: solutions[x]):
       print "%s: %.2f%%" % (_strategies[i], solutions[i] * 100.0)

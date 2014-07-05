@@ -101,3 +101,5 @@ Control.Mage.Freeze.Antonidas<Control.Hunter
 Control.Paladin>Aggro.Warlock.Zoo
 Control.Paladin>Midrange.Shaman.Overload
 Control.Mage.Freeze.Pyro>Control.Warlock.Handlock
+Control.Mage.Freeze.Pyro>Aggro.Warlock.Zoo.Murlock
+Control.Mage.Freeze.Pyro>Aggro.Warlock.Zoo
