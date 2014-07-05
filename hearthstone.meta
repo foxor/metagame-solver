@@ -1,40 +1,43 @@
 Inviable decks in generation 1:
-	Control.Warrior is never better than Aggro.Druid.Token
 	Aggro.Shaman is never better than Aggro.Paladin
-	Midrange.Druid.Ramp.Murlock is never better than Aggro.Priest
-	Combo.Rouge.Miracle.Malygos is never better than Aggro.Priest
-	Aggro.Warlock.Zoo.Murloc is never better than Aggro.Priest
+	Midrange.Druid.Ramp.Murlock is never better than Control.Hunter
+	Combo.Rouge.Miracle.Malygos is never better than Control.Hunter
+	Combo.Shaman.Overheal is never better than Control.Hunter
+	Aggro.Warlock.Zoo.Murloc is never better than Control.Hunter
 	Control.Mage is never better than Midrange.Mage.Secret
-	Midrange.Druid is never better than Control.Mage
-	Midrange.Mage.Secret is never better than Control.Mage
-	Control.Mage.Freeze.Giants is never better than Aggro.Priest
+	Midrange.Druid is never better than Midrange.Mage.Secret
+	Midrange.Mage.Secret is never better than Control.Hunter
+	Control.Mage.Freeze.Giants is never better than Control.Hunter
 	Aggro.Paladin is never better than Aggro.Shaman
 	Aggro.Druid.Token is never better than Control.Warrior
-	Control.Priest.Giants is never better than Aggro.Priest
-	Control.Mage.Freeze.Antonidas is never better than Control.Paladin
-	Combo.Priest.Wombo is never better than Aggro.Priest
+	Control.Priest.Giants is never better than Control.Hunter
+	Combo.Priest.Wombo is never better than Control.Hunter
 Inviable decks in generation 2:
-	Aggro.Rouge.Miracle is never better than Aggro.Priest
-	Aggro.Shaman.Totem.Bloodlust is never better than Aggro.Priest
+	Aggro.Rouge.Miracle is never better than Control.Hunter
+	Aggro.Shaman.Totem.Bloodlust is never better than Control.Hunter
 Inviable decks in generation 3:
-	Midrange.Hunter.Lifecoach is never better than Aggro.Priest
-Midrange.Druid.Werewolf: 0.56%
-Control.Priest: 1.27%
-Aggro.Warrior: 1.68%
-Control.Paladin.Wombo: 1.86%
-Control.Mage.Freeze.Pyro: 1.98%
-Aggro.Hunter.Face: 2.12%
-Midrange.Shaman.Overload: 2.36%
-Control.Warlock.Handlock: 2.38%
-Aggro.Mage: 2.43%
-Aggro.Priest: 2.46%
-Aggro.Rouge.Tempo: 3.55%
-Aggro.Paladin.Shockadin: 4.35%
-Combo.Rouge.Miracle: 4.79%
-Midrange.Paladin: 6.66%
-Midrange.Druid.Ramp: 6.84%
-Control.Shaman: 8.10%
-Control.Paladin: 9.47%
-Mage.Midrange: 11.98%
-Aggro.Warlock.Zoo: 12.56%
-Combo.Mage.Spells: 12.62%
+	Midrange.Hunter.Lifecoach is never better than Control.Hunter
+Midrange.Druid.Werewolf: 0.07%
+Control.Mage.Freeze.Antonidas: 0.09%
+Midrange.Paladin: 0.11%
+Control.Paladin.Wombo: 0.17%
+Aggro.Rouge.Tempo: 0.55%
+Combo.Rouge.Miracle: 0.81%
+Aggro.Warrior: 1.16%
+Control.Shaman: 1.46%
+Aggro.Mage: 1.73%
+Control.Priest: 1.87%
+Aggro.Paladin.Shockadin: 2.11%
+Midrange.Shaman.Overload: 2.23%
+Control.Hunter: 2.46%
+Midrange.Druid.Ramp: 2.65%
+Aggro.Warrior.Weapon: 5.26%
+Combo.Mage.Spells: 5.50%
+Control.Paladin: 6.19%
+Control.Warrior: 6.66%
+Midrange.Mage: 7.58%
+Aggro.Priest: 9.61%
+Aggro.Hunter.Face: 9.76%
+Control.Warlock.Handlock: 10.16%
+Aggro.Warlock.Zoo: 10.20%
+Control.Mage.Freeze.Pyro: 11.61%
