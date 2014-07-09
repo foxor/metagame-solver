@@ -22,8 +22,7 @@ def record(strategy):
     sum(x for x in _wins[strategy].values()) if strategy in _wins else 0,
     sum(_wins[x][strategy] for x in _wins if strategy in _wins[x])
   )
-  softened_wins = soften(real_wins, _RECORD_SOFTENING)
-  return float(softened_wins[0]) / (softened_wins[0] + softened_wins[1])
+  return soften(real_wins, _RECORD_SOFTENING)
 
 def matchup(strategy1, strategy2):
   real_wins = (
@@ -37,7 +36,7 @@ def matchup(strategy1, strategy2):
     return float(softened_matchup[0]) / (softened_matchup[0] + softened_matchup[1])
 
   records = (record(strategy1), record(strategy2))
-  return float(records[0] + (1 - records[1])) / 2.0
+  return float(records[0][0] + records[1][1]) / (records[0][0] + records[0][1] + records[1][0] + records[1][1])
 
 def parse(fName, depth):
   global _wins, _strategy_names, _seen_strategies, _strategies
