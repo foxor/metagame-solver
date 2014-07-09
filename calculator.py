@@ -2,12 +2,47 @@
 
 import sys
 
-def main(fName, depth):
+_RECORD_SOFTENING = 5
+_MATCHUP_SOFTENING = 0
+
+_wins = dict()
+_strategies = list()
+_strategy_names = list()
+_seen_strategies = set()
+
+def soften(real_wins, softening):
+  softening_win_indexes = [(x + 1) % 2 for x in xrange(softening * 2 - (real_wins[0] + real_wins[1]))]
+  return (
+    real_wins[0] + len([x for x in softening_win_indexes if x == 0]),
+    real_wins[1] + len([x for x in softening_win_indexes if x == 1])
+  )
+
+def record(strategy):
+  real_wins = (
+    sum(x for x in _wins[strategy].values()) if strategy in _wins else 0,
+    sum(_wins[x][strategy] for x in _wins if strategy in _wins[x])
+  )
+  softened_wins = soften(real_wins, _RECORD_SOFTENING)
+  return float(softened_wins[0]) / (softened_wins[0] + softened_wins[1])
+
+def matchup(strategy1, strategy2):
+  real_wins = (
+    _wins[strategy1][strategy2] if strategy1 in _wins and strategy2 in _wins[strategy1] else 0,
+    _wins[strategy2][strategy1] if strategy2 in _wins and strategy1 in _wins[strategy2] else 0
+  )
+  
+  total_matches = real_wins[0] + real_wins[1]
+  if total_matches > 0:
+    softened_matchup = soften(real_wins, _MATCHUP_SOFTENING)
+    return float(softened_matchup[0]) / (softened_matchup[0] + softened_matchup[1])
+
+  records = (record(strategy1), record(strategy2))
+  return float(records[0] + (1 - records[1])) / 2.0
+
+def parse(fName, depth):
+  global _wins, _strategy_names, _seen_strategies, _strategies
   if depth == 0:
     depth = sys.maxint
-  wins = dict()
-  strategy_names = list()
-  seen_strategies = set()
   for line in open(fName, 'r'):
     if '>' in line:
       strategy_names = line.strip().split('>')
@@ -22,40 +57,36 @@ def main(fName, depth):
     if strategy_names[0] == strategy_names[1]:
       continue
 
-    seen_strategies = seen_strategies.union(strategy_names)
+    _seen_strategies = _seen_strategies.union(strategy_names)
 
     previous_wins = 0
-    if strategy_names[0] in wins:
-      if strategy_names[1] in wins[strategy_names[0]]:
-        previous_wins = wins[strategy_names[0]][strategy_names[1]]
+    if strategy_names[0] in _wins:
+      if strategy_names[1] in _wins[strategy_names[0]]:
+        previous_wins = _wins[strategy_names[0]][strategy_names[1]]
     else:
-      wins[strategy_names[0]] = dict()
-    wins[strategy_names[0]][strategy_names[1]] = previous_wins + 1
+      _wins[strategy_names[0]] = dict()
+    _wins[strategy_names[0]][strategy_names[1]] = previous_wins + 1
 
-  strategies = sorted(list(seen_strategies), key= lambda x: sum(y for y in wins[x].values()) if x in wins else 0)
-  print "%d" % len(strategies)
-  print "%s" % "\n".join(strategies)
+  _strategies = sorted(list(_seen_strategies), key= lambda x: sum(y for y in _wins[x].values()) if x in _wins else 0)
 
-  for primary in xrange(len(strategies)):
-    primary_name = strategies[primary]
+def calculate():
+  for primary in xrange(len(_strategies)):
+    primary_name = _strategies[primary]
     percentages = list()
-    for opponent in xrange(primary + 1, len(strategies)):
-      opponent_name = strategies[opponent]
-      primary_wins = wins[primary_name][opponent_name] if primary_name in wins and opponent_name in wins[primary_name] else 0
-      opponent_wins = wins[opponent_name][primary_name] if opponent_name in wins and primary_name in wins[opponent_name] else 0
-      if primary_wins + opponent_wins == 0:
-        primary_losses_total = sum(wins[x][primary_name] for x in wins if primary_name in wins[x])
-        primary_wins_total = sum(x for x in wins[primary_name].values()) if primary_name in wins else 0
-        primary_record = float(primary_wins_total) / (primary_wins_total + primary_losses_total)
+    for opponent in xrange(primary + 1, len(_strategies)):
+      opponent_name = _strategies[opponent]
+      percentages.append(matchup(primary_name, opponent_name))
+    yield percentages
 
-        opponent_losses_total = sum(wins[x][opponent_name] for x in wins if opponent_name in wins[x])
-        opponent_wins_total = sum(x for x in wins[opponent_name].values()) if opponent_name in wins else 0
-        opponent_record = float(opponent_wins_total) / (opponent_wins_total + opponent_losses_total)
+def serialize(percentage_lists):
+  print "%d" % len(_strategies)
+  print "%s" % "\n".join(_strategies)
+  for percentages in percentage_lists:
+    print " ".join(str(x) for x in percentages)
 
-        percentages.append(str(float(primary_record + (1 - opponent_record)) / 2.0))
-      else:
-        percentages.append(str(float(primary_wins)/(primary_wins + opponent_wins)))
-    print " ".join(percentages)
+def main(fName, depth):
+  parse(fName, depth)
+  serialize(calculate())
 
 if __name__ == '__main__':
   if len(sys.argv) == 3:

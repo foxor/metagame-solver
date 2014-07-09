@@ -6,4 +6,3 @@ hearthstone.stats: hearthstone.log calculator.py
 hearthstone.meta: hearthstone.stats solver.py
 	./solver.py hearthstone.stats > hearthstone.meta
 	cat hearthstone.meta
-	./picker.py hearthstone.meta
