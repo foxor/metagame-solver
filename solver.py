@@ -9,7 +9,7 @@ _matchups = []
 _inviable = []
 _undefined = []
 
-_DEBUG = True
+_DEBUG = False
 
 def parse_input(fName):
   global _strategies, _matchups

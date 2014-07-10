@@ -122,3 +122,4 @@ Control.Paladin.Divine>Control.Shaman.Giants
 Control.Paladin.Divine<Aggro.Druid.Token
 Control.Paladin>Aggro.Warlock.Zoo
 Control.Paladin>Combo.Rouge.Miracle
+Aggro.Hunter.Face>Midrange.Shaman.Overload

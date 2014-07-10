@@ -1,47 +1,25 @@
-Inviable decks in generation 1:
-	Aggro.Shaman is never better than Aggro.Paladin
-	Midrange.Druid.Ramp.Murlock is never better than Aggro.Priest
-	Control.Shaman.Giants is never better than Aggro.Priest
-	Combo.Rouge.Miracle.Malygos is never better than Aggro.Priest
-	Aggro.Warlock.Zoo.Murloc is never better than Aggro.Warlock.Zoo.Murlock
-	Control.Mage is never better than Midrange.Mage.Secret
-	Midrange.Mage.Secret is never better than Aggro.Priest
-	Control.Mage.Freeze.Giants is never better than Aggro.Priest
-	Aggro.Paladin is never better than Aggro.Shaman
-	Combo.Shaman.Overheal is never better than Aggro.Priest
-	Aggro.Warlock.Zoo.Murlock is never better than Aggro.Warlock.Zoo.Murloc
-	Control.Priest.Giants is never better than Aggro.Priest
-	Midrange.Druid is never better than Aggro.Priest
-	Combo.Priest.Wombo is never better than Aggro.Priest
-Inviable decks in generation 2:
-	Aggro.Shaman.Totem.Bloodlust is never better than Aggro.Priest
-	Aggro.Rouge.Miracle is never better than Aggro.Priest
-	Control.Paladin.Divine is never better than Aggro.Priest
-Inviable decks in generation 3:
-	Midrange.Hunter.Lifecoach is never better than Aggro.Priest
-	Aggro.Druid.Token is never better than Control.Warrior
-Control.Shaman: 0.30%
-Midrange.Druid.Werewolf: 0.67%
-Combo.Mage.Spells: 0.86%
-Control.Mage.Freeze.Antonidas: 0.99%
-Control.Hunter: 1.17%
-Midrange.Paladin: 1.50%
-Aggro.Paladin.Shockadin: 2.09%
-Aggro.Priest: 2.11%
-Aggro.Rouge.Tempo: 2.83%
-Control.Paladin: 3.44%
-Control.Warrior: 3.49%
-Combo.Miracle.Rouge: 3.61%
-Control.Priest: 3.71%
-Control.Paladin.Wombo: 3.99%
-Aggro.Warrior: 4.04%
-Aggro.Mage: 4.62%
-Combo.Rouge.Miracle: 4.76%
-Midrange.Druid.Ramp: 4.96%
-Control.Mage.Freeze.Pyro: 5.36%
-Aggro.Hunter.Face: 6.28%
-Control.Warlock.Handlock: 6.64%
-Aggro.Warrior.Weapon: 6.71%
-Aggro.Warlock.Zoo: 7.06%
-Midrange.Mage: 8.42%
-Midrange.Shaman.Overload: 10.41%
+Control.Warrior: 0.43%
+Control.Shaman: 0.44%
+Midrange.Mage: 0.45%
+Aggro.Mage: 0.52%
+Control.Mage.Freeze.Antonidas: 0.55%
+Midrange.Druid.Werewolf: 0.65%
+Aggro.Rouge.Tempo: 0.76%
+Combo.Mage.Spells: 0.83%
+Combo.Rouge.Miracle: 0.88%
+Midrange.Paladin: 1.45%
+Aggro.Paladin.Shockadin: 2.78%
+Control.Paladin.Wombo: 3.45%
+Midrange.Druid.Ramp: 3.48%
+Aggro.Warrior: 3.67%
+Aggro.Hunter.Face: 4.41%
+Control.Hunter: 4.70%
+Control.Paladin: 4.73%
+Control.Priest: 5.73%
+Midrange.Shaman.Overload: 6.91%
+Control.Mage.Freeze.Pyro: 7.29%
+Aggro.Warlock.Zoo: 7.37%
+Aggro.Warrior.Weapon: 8.66%
+Control.Warlock.Handlock: 9.51%
+Combo.Miracle.Rouge: 9.84%
+Aggro.Priest: 10.52%

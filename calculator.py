@@ -25,6 +25,9 @@ def record(strategy):
   return soften(real_wins, _RECORD_SOFTENING)
 
 def matchup(strategy1, strategy2):
+  if strategy1 == strategy2:
+    return 0.5
+
   real_wins = (
     _wins[strategy1][strategy2] if strategy1 in _wins and strategy2 in _wins[strategy1] else 0,
     _wins[strategy2][strategy1] if strategy2 in _wins and strategy1 in _wins[strategy2] else 0
